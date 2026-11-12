@@ -1,0 +1,30 @@
+{
+	"name": "@local/dsh-effort-command",
+	"version": "0.1.0",
+	"private": true,
+	"type": "module",
+	"description": "/effort slash command: change the current session's reasoning effort without touching the model. /model 과 같은 popupSelect UX.",
+	"license": "MIT",
+	"exports": {
+		".": "./index.js",
+		"./client": "./client.js",
+		"./package.json": "./package.json"
+	},
+	"files": [
+		"index.js",
+		"client.js",
+		"cordis.patch.yml",
+		"README.md"
+	],
+	"dsh": {
+		"bundle": {
+			"patch": "./cordis.patch.yml"
+		},
+		"client": {
+			"platform": "web",
+			"inject": [
+				"@deepseek-ai/dsh-client-ui-primitives"
+			]
+		}
+	}
+}

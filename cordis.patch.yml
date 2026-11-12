@@ -1,0 +1,6 @@
+# @local/dsh-effort-command bundle patch.
+# 브라우저 로스터에 /effort 커맨드 플러그인 한 줄을 추가한다 (config 없음).
+- insert:
+    - id: effort-command
+      name: '@local/dsh-effort-command'
+      config: {}
